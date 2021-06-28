@@ -31,19 +31,19 @@ Summarized into three parts
 The ‘DQ’ stock performance declined by 63% by end of year 2018
 We recommend to Steve and his parents that they need to look at better performing stocks to put their money
 
-![DQ_Stock_Performance](https://user-images.githubusercontent.com/85518330/123557522-de335f00-d756-11eb-9f1a-1ea717bc8aca.png)
+![DQ_Analysis_2018](https://user-images.githubusercontent.com/85518330/123638008-4714e880-d7e4-11eb-9f64-b54e898dad6c.png)
+
 
 #### All Stocks Analysis 2017
+Almost all stocks except TERP did well in 2017 
 
-In 2017 almost all stocks performed well, most stocks saw a very healthy increase in returns from start to year end
+![All_Stocks_2017](https://user-images.githubusercontent.com/85518330/123638150-71ff3c80-d7e4-11eb-924a-286c3ef2d5ad.png)
 
-![All_Stocks_Performance_2017](https://user-images.githubusercontent.com/85518330/123557535-facf9700-d756-11eb-98ef-ee249048f5d9.png)
 
 #### All Stocks Analysis 2018
 
 In 2018 the tables turned on most stocks including DQ. The two stocks that have been in the green over both years are ‘ENPH’ and ‘RUN’
-
-![All_Stocks_Performance_2018](https://user-images.githubusercontent.com/85518330/123558074-0ff9f500-d75a-11eb-9cbb-ef7787a246c5.png))
+![All_Stocks_2018](https://user-images.githubusercontent.com/85518330/123638257-96f3af80-d7e4-11eb-8da5-0cf09a8122a0.png)
 
 #### Our Recommendation
 
@@ -63,15 +63,15 @@ This documentation tells Steve or anyone else who uses this in future what was d
    *	We next wrote a loop to go through each of the rows in our data from row 2 to the last row with data. Our code does the following
    *	For all 12 tickers in column 1. Goes through each row, checks to see if the next ticker is the same as the current ticker and if yes, then adds the volumes from               column 8 to get totalVolume for that ticker
             
-     If Cells(j, 1).Value = ticker Then totalVolume = totalVolume + Cells(j, 8).Value
+    If Cells(j, 1).Value = ticker Then totalVolume = totalVolume + Cells(j, 8).Value
       
    * Check to make sure that the previous ticker in not the current ticker, then, the closing price from column 6 is taken to be the startingPrice of that ticker
             
-     If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then startingPrice = Cells(j, 6).Value
+    If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then startingPrice = Cells(j, 6).Value
  
    * Check to make sure that the next ticker is not the current ticker, then the closing price from column 6 is taken to be the endingPrice for that ticker 
            
-     If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then endingPrice = Cells(j, 6).Value
+    If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then endingPrice = Cells(j, 6).Value
 
    *  Next we output the data in the AllStocksAnalysis sheet tickers, totalVolume & return 
    
@@ -79,13 +79,13 @@ This documentation tells Steve or anyone else who uses this in future what was d
    
    *  Color coded stocks with positive returns in green and those with negative returns in red so that Steve can know the performance in one glance 
           
-      If Cells(4, 3) > 0 Then Cells(4, 3).Interior.Color = vbGreen
-      ElseIf Cells(4, 3) < 0 Then Cells(4, 3).Interior.Color = vbRed
-      Else Cells(4, 3).Interior.Color = xlNone
+     If Cells(4, 3) > 0 Then Cells(4, 3).Interior.Color = vbGreen
+     ElseIf Cells(4, 3) < 0 Then Cells(4, 3).Interior.Color = vbRed
+     Else Cells(4, 3).Interior.Color = xlNone
 
    *  We ensured that our code enabled Steve to pick the year on which he wanted to do his analysis 
       
-      yearValue = InputBox("What year would you like to do the analysis for?")
+     yearValue = InputBox("What year would you like to do the analysis for?")
       
    *  We added a timer to help us determine how long our code was taking to run.
    
@@ -116,7 +116,7 @@ Steve was quite happy with our analysis, but relooking at our code, we felt that
 
    * Create a tickerIndex 
   
-          tickerIndex = 0
+           tickerIndex = 0
   
    * Create 3 output arrays to hold our results
     
@@ -132,15 +132,15 @@ Steve was quite happy with our analysis, but relooking at our code, we felt that
 
    *	If the current row is the first row with the selected tickerIndex. then set the corresponding price in column 6 as the tickerStartingPrices
  
-         If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
 
    *	If the current row is the last row with the selected ticker,then set the corresponding price in column 6 as the tickerEndingPrice
   
-         If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
  
    *	Increase the tickerIndex.If the next row’s ticker doesn’t match, increase the tickerIndex
  
-         If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then tickerIndex = tickerIndex + 1
+            If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then tickerIndex = tickerIndex + 1
 
    *	We output the data in the AllStocksAnalysis sheet tickers, totalVolume & return    
  
