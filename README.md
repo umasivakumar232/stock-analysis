@@ -8,13 +8,11 @@ Steve is trying to help his parents choose which Green Energy stocks they should
   *	DQ stock in particular to understand if their initial leaning is a good one
   *	All the stocks to check and see if there are options better than DQ for his parents to invest in 
 
-We have two years (2017 & 2018) of stock performance data for 12 Green Energy stocks.  
-We have decided to use VBA for this analysis.
-The code we wrote provided Steve with the answers he was seeking, however, we felt that a more efficient code was possible that could help 
+The code we wrote in VBA provided Steve with the answers he was seeking, however, we felt that we could have written a more efficient code that could help 
   * Reduce the run times
   * Avoid repetitive tasks thus reducing strain on the systems
 
-We modified the existing working code (a process commonly called Refactoring) with the aim to make it more efficient. 
+So we modified the existing working code (a process commonly called Refactoring). 
 We called the first code All Stock Analysis and the second code All Stock Analysis Refactored.
 
 ## Results
@@ -29,12 +27,13 @@ Summarized into three parts
 #### DQ Stock Analysis
 
 The ‘DQ’ stock performance declined by 63% by end of year 2018
-We recommend to Steve and his parents that they need to look at better performing stocks to put their money
+We recommend to Steve and his parents that they should consider a better performing stock to put their money
 
 ![DQ_Analysis_2018](https://user-images.githubusercontent.com/85518330/123638008-4714e880-d7e4-11eb-9f64-b54e898dad6c.png)
 
 
 #### All Stocks Analysis 2017
+
 Almost all stocks except TERP did well in 2017 
 
 ![All_Stocks_2017](https://user-images.githubusercontent.com/85518330/123638150-71ff3c80-d7e4-11eb-924a-286c3ef2d5ad.png)
