@@ -1,5 +1,7 @@
 # Stock Analysis using VBA
 
+![shutterstock_750493204](https://user-images.githubusercontent.com/85518330/146301250-9cf7988c-6e90-4e9a-ad88-2ce66da65b1f.jpg)
+
 ## Overview of the Project
 
 Steve is trying to help his parents choose which Green Energy stocks they should invest in. Their initial leaning was towards investing in the ‘DQ’ stocks. Steve has approached us to help him. We start by looking at 
